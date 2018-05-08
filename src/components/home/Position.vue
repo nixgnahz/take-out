@@ -23,12 +23,17 @@
 <style scoped>
   .top {
     background-image: linear-gradient(90deg,#0af,#0085ff);
-    padding: 0.7rem 0.8rem;
+    padding: 0.7rem 0rem;
   }
 
   .top .position {
     font-size: 0.65rem;
+    padding: 0px 0.8rem;
     color: white;
+  }
+
+  .top .search {
+    padding: 0.5rem 0.8rem;
   }
 
   .top .search a{
@@ -41,7 +46,6 @@
     justify-content: center;
     border-radius: 2px;
     color: #999;
-    margin: 0.8rem 0px 0.2rem;
   }
 
   .top .search img {

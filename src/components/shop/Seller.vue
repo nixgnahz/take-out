@@ -157,7 +157,7 @@
     top: 1.5rem;
     font-size: 0.4rem;
     justify-content: center;
-    width: 1.5rem;
+    width: 1.8rem;
   }
 
   .collect .icon {

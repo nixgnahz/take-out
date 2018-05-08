@@ -220,21 +220,21 @@
     flex-direction: row;
     font-size: 0.4rem;
     margin: 0.5rem 0px;
-    justify-content: center;
+    justify-content: space-around;
     border: 0.133333vw solid #eee;
     padding: 0.25rem;
+    transform: scale(0.80);
   }
 
   .discount .label {
     background-color: rgb(112, 188, 70);
     color: white;
-    padding: 0px 0.1rem;
-    margin-right: 0.5rem;
+    margin-right: 0.3rem;
   }
 
   .discount .activity {
     color: #ddd;
-    margin-left: 0.5rem;
+    margin-left: 0.3rem;
   }
 
   .right_triangle {
