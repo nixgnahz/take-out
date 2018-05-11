@@ -123,7 +123,7 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   .top_bar {
     width: 100%;
     background-image: linear-gradient(90deg,#0af,#0085ff);
@@ -133,23 +133,20 @@
     height: 1.6rem;
     line-height: 1.3rem;
     position: relative;
-  }
-
-  .top_bar a {
-    font-size: 0px;
-    position: absolute;
-    left: 0.5rem;
-    top: 0.4rem;
-  }
-
-  .top_bar a img {
-    width: 0.8rem;
-    height: 0.8rem;
-  }
-
-  .top_bar span {
-    font-size: 0.6rem;
-    color: white;
+    a {
+      font-size: 0px;
+      position: absolute;
+      left: 0.5rem;
+      top: 0.4rem;
+      img {
+        width: 0.8rem;
+        height: 0.8rem;
+      }
+    }
+    span {
+      font-size: 0.6rem;
+      color: white;
+    }
   }
 
   .body {
@@ -158,191 +155,166 @@
     margin: 0px 3%;
     background-color: white;
     margin-bottom: 0.5rem;
-  }
-
-  .body .top {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid #eee;
-  }
-
-  .body .top img {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-  }
-
-  .body .top .timeline {
-    color: #333;
-    font-weight: 700;
-    font-size: 0.8rem;
-    display: flex;
-    align-items: center;
-  }
-
-  .body .top .timeline span {
-    margin-left: 0.5rem;
-    color: #999;
-    font-size: 0.4rem;
-  }
-
-  .body .top>span {
-    font-size: 0.4rem;
-    color: #999;
-    margin: 0.3rem 0px;
-  }
-
-  .body .top .shop {
-    color: #fff;
-    font-size: 0.5rem;
-    background-color: #2395ff;
-    padding: 0.3rem 1.2rem;
-    border-radius: 3px;
-    margin: 0.25rem;
-  }
-
-  .body .middle .shop {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    position: relative;
-    padding: 0.15rem;
-    border-bottom: .4vw solid #dfdfdf;
-  }
-
-  .body .middle .shop img {
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    margin: 0.25rem;
-  }
-
-  .body .middle .shop p {
-    font-size: 0.55rem;
-    color: #999;
-  }
-
-  .body .middle .shop a {
-    font-size: 0.5rem;
-    right: 0.8rem;
-    position: absolute;
-  }
-
-  .body .middle .dishes {
-    margin-top: 0.1rem;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0.35rem;
-    border-top: 1px solid #eee;
-    margin: 0px 0.5rem;
-  }
-
-  .body .middle .dishes>span {
-    font-size: 0.6rem;
-    color: #333;
-  }
-
-  .body .middle .dishes p {
-    font-size: 0.5rem;
-  }
-
-  .body .middle .dishes p span {
-    margin: 0.25rem 0rem 0.25rem 0.75rem;
-  }
-
-  .body .express {
-    margin: 0px 0.5rem;
-    border-top: 1px solid #eee;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0.35rem;
-  }
-
-  .body .middle .express p {
-    font-size: 0.6rem;
-    color: #333;
-  }
-
-  .body .middle .express span {
-    font-size: 0.5rem;
-  }
-
-  .body .discount {
-    margin: 0px 0.5rem;
-    border-top: 1px solid #eee;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0.35rem;
-  }
-
-  .body .discount p {
-    font-size: 0.6rem;
-    color: #333;
-  }
-
-  .body .discount span {
-    font-size: 0.5rem;
-    color: #ff5339;
-  }
-
-  .body .middle .total_pay {
-    margin: 0px 0.5rem;
-    border-top: 1px solid #eee;
-    height: 2.65rem;
-  }
-
-  .body .middle .total_pay p {
-    font-size: 0.65rem;
-    float: right;
-    line-height: 3rem;
-  }
-
-  .body .middle .total_pay span {
-    font-size: 0.4rem;
-    margin-right: 0.5rem;
-  }
-
-  .body .express_info {
-    border-bottom: 5px solid #eee;
-  }
-
-  .body .express_info .title, .body .order_info .title {
-    border-top: 1px solid #eee;
-    font-size: 0.65rem;
-    padding: 0.3rem;
-  }
-
-  .body .express_info .info, .body .order_info .info {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
-    color: #6e6e6e;
-    font-size: 0.55rem;
-    padding: 0.35rem;
-    border-top: 1px solid #eee;
-  }
-
-  .body .express_info .info>span, .body .order_info .info>span {
-    width: 4rem;
-  }
-
-  .body .express_info .info p, .body .order_info .info p {
-    width: 100%;
-    display: flex;
-    aign-items: center;
-    flex-direction: column;
-  }
-
-  .body .express_info .info p span, .body .order_info .info p span {
-    margin: 0.1rem 0px;
+    .top {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #eee;
+      img {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+      }
+      .timeline {
+        color: #333;
+        font-weight: 700;
+        font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+        span {
+          margin-left: 0.5rem;
+          color: #999;
+          font-size: 0.4rem;
+        }
+      }
+      > span {
+        font-size: 0.4rem;
+        color: #999;
+        margin: 0.3rem 0px;
+      }
+      .shop {
+        color: #fff;
+        font-size: 0.5rem;
+        background-color: #2395ff;
+        padding: 0.3rem 1.2rem;
+        border-radius: 3px;
+        margin: 0.25rem;
+      }
+    }
+    .middle {
+      .shop {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        position: relative;
+        padding: 0.15rem;
+        border-bottom: .4vw solid #dfdfdf;
+        img {
+          width: 1rem;
+          height: 1rem;
+          border-radius: 50%;
+          margin: 0.25rem;
+        }
+        p {
+          font-size: 0.55rem;
+          color: #999;
+        }
+        a {
+          font-size: 0.5rem;
+          right: 0.8rem;
+          position: absolute;
+        }
+      }
+      .dishes {
+        margin-top: 0.1rem;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.35rem;
+        border-top: 1px solid #eee;
+        margin: 0px 0.5rem;
+        > span {
+          font-size: 0.6rem;
+          color: #333;
+        }
+        p {
+          font-size: 0.5rem;
+          span {
+            margin: 0.25rem 0rem 0.25rem 0.75rem;
+          }
+        }
+      }
+      .express {
+        margin: 0px 0.5rem;
+        border-top: 1px solid #eee;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.35rem;
+        p {
+          font-size: 0.6rem;
+          color: #333;
+        }
+        span {
+          font-size: 0.5rem;
+        }
+      }
+      .discount {
+        margin: 0px 0.5rem;
+        border-top: 1px solid #eee;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.35rem;
+        p {
+          font-size: 0.6rem;
+          color: #333;
+        }
+        span {
+          font-size: 0.5rem;
+          color: #ff5339;
+        }
+      }
+      .total_pay {
+        margin: 0px 0.5rem;
+        border-top: 1px solid #eee;
+        height: 2.65rem;
+        p {
+          font-size: 0.65rem;
+          float: right;
+          line-height: 3rem;
+        }
+        span {
+          font-size: 0.4rem;
+          margin-right: 0.5rem;
+        }
+      }
+      .express_info {
+        border-bottom: 5px solid #eee;
+      }
+      .express_info, .order_info {
+        .title {
+          border-top: 1px solid #eee;
+          font-size: 0.65rem;
+          padding: 0.3rem;
+        }
+        .info {
+          display: flex;
+          align-items: flex-start;
+          flex-direction: row;
+          color: #6e6e6e;
+          font-size: 0.55rem;
+          padding: 0.35rem;
+          border-top: 1px solid #eee;
+          > span {
+            width: 4rem;
+          }
+          p {
+            width: 100%;
+            display: flex;
+            aign-items: center;
+            flex-direction: column;
+            span {
+              margin: 0.1rem 0px;
+            }
+          }
+        }
+      }
+    }
   }
 </style>

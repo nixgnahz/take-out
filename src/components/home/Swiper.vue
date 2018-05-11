@@ -46,8 +46,7 @@
   }
 </script>
 
-<style scoped>
-  img {
+<style scoped lang="sass">
+  img
     width: 100%;
-  }
 </style>

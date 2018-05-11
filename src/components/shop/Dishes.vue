@@ -29,7 +29,7 @@
     </div>
     <div class="cart">
       <div :class="cartInfo.length ? 'notEmpty' : 'empty'" @click="changeCartDetail">
-        <img :src="cart_icon"/>
+        <img :src="cart_icon" />
         <span class="count" v-show="cartCount">{{cartCount}}</span>
       </div>
       <p class="price">
@@ -52,7 +52,7 @@
             <p>¥{{item.money}}</p>
             <span class="minus_btn" @click="decreaseCart(item.index, item.idx)">-</span>
             <span class="num">{{item.count}}</span>
-            <span class="add_btn" @click="increaseCart(item.index, item.idx)">+</span>
+            <span class="add_btn" @click="increaseCart(item.index, item.idx, $event)">+</span>
           </div>
         </div>
       </div>
@@ -330,7 +330,7 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   .boxes {
     display: flex;
     align-items: flex-start;
@@ -338,226 +338,341 @@
     background-color: white;
     margin-bottom: 2rem;
     overflow: hidden;
-  }
-
-  ul.menu li {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    border-bottom: 1px solid #e8e8e8;
-    color: #666;
-  }
-
-  li.active {
-    background-color: #ffffff;
-  }
-
-  li.inactive {
-    background-color: #f8f8f8;
-  }
-
-  ul.menu li {
-    width: 2.5rem;
-    font-size: 0.5rem;
-    padding: 0.75rem 0.5rem;
-  }
-
-  .detail {
-    width: 100%;
-    overflow: hidden;
-  }
-
-  .detail li .title {
-    font-size: 0.45rem;
-    color: #999;
-    padding: 0.25rem;
-    border-bottom: 1px solid #eee;
-  }
-
-  .detail li .title span {
-    font-size: 0.55rem;
-    color: #333;
-    margin-right: 0.5rem;
-  }
-
-  .detail li .dishes {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    padding: 0.3rem 0.5rem 0px;
-    margin-bottom: 1rem;
-  }
-
-  .detail li .dishes img {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 0.5rem;
-  }
-
-  .detail li .dishes>div {
-    flex: 1;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .detail li .dishes>div .name {
-    color: #444;
-    font-size: 0.6rem;
-    font-weight: 900;
-  }
-
-  .detail li .dishes>div .sales {
-    color: #999;
-    font-size: 0.5rem;
-    margin-top: 0.2rem;
-  }
-
-  .detail li .dishes>div .price {
-    width: 100%;
-    color: #f60;
-    font-size: 0.6rem;
-    margin-top: 0.7rem;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .detail li .dishes>div .price .dollar {
-    font-size: 0.5rem;
-    margin-right: 0.1rem;
-  }
-
-  .minus_btn {
-    width: 0.76rem;
-    height: 0.76rem;
-    display: inline-block;
-    text-align: center;
-    line-height: 0.76rem;
-    border: 0.02rem solid #2395ff;
-    border-radius: 50%;
-    font-size: 0.6rem;
-    color: #2395ff;
-  }
-
-  .detail li .dishes>div .price .num {
-    margin: 0px 0.5rem;
-    color: #666;
-  }
-
-  .add_btn {
-    width: 0.8rem;
-    height: 0.8rem;
-    display: inline-block;
-    text-align: center;
-    line-height: 0.8rem;
-    background-color: #2395ff;
-    border-radius: 50%;
-    font-size: 0.6rem;
-    color: white;
-  }
-
-  .cart {
-    position: fixed;
-    bottom: -2px;
-    z-index: 1000;
-    width: 100%;
-    height: 2rem;
-    background-color: rgba(61,61,63,.9);
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .empty {
-    background-color: #363636;
-  }
-
-  .notEmpty {
-    background-color: #fff;
-  }
-
-  .cart div {
-    position: absolute;
-    top: -0.8rem;
-    left: 0.8rem;
-
-    border-radius: 50%;
-    border: 0.25rem solid #444;
-    width: 1.6rem;
-    height: 1.6rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .cart img {
-    width: 1.2rem;
-    height: 1.2rem;
-  }
-
-  .cart .price {
-    display: flex;
-    flex-direction: column;
-    margin-left: 3.5rem;
-  }
-
-  .cart .price span:nth-child(1) {
-    font-size: 0.7rem;
-    color: white;
-  }
-
-  .cart .price span:nth-child(2) {
-    font-size: 0.4rem;
-    color: #999;
-  }
-
-  .cart>span {
-    font-size: 0.6rem;
-    color: white;
-    margin-right: 0.5rem;
-  }
-
-  .pay_btn {
-    background-color: #4cd964;
-    color: #fff;
-    height: 100%;
-    width: 3.5rem;
-    margin-right: 0px !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .mask {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.4);
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .cart_info {
-    position: fixed;
-    bottom: 0px;
-    padding-bottom: 2rem;
-    background-color: white;
-    width: 100%;
-    z-index: 100;
-    animation: goUp 0.25s linear;
-  }
-
-  .scroll {
-    overflow: scroll;
-    max-height: 10rem;
+    ul.menu {
+      li {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border-bottom: 1px solid #e8e8e8;
+        color: #666;
+        width: 2.5rem;
+        font-size: 0.5rem;
+        padding: 0.75rem 0.5rem;
+        &.active {
+          background-color: #ffffff;
+        }
+        &.inactive {
+          background-color: #f8f8f8;
+        }
+      }
+    }
+    .detail {
+      width: 100%;
+      overflow: hidden;
+      li {
+        .title {
+          font-size: 0.45rem;
+          color: #999;
+          padding: 0.25rem;
+          border-bottom: 1px solid #eee;
+          span {
+            font-size: 0.55rem;
+            color: #333;
+            margin-right: 0.5rem;
+          }
+        }
+        .dishes {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          padding: 0.3rem 0.5rem 0px;
+          margin-bottom: 1rem;
+          img {
+            width: 3rem;
+            height: 3rem;
+            margin-right: 0.5rem;
+          }
+          > div {
+            flex: 1;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            .name {
+              color: #444;
+              font-size: 0.6rem;
+              font-weight: 900;
+            }
+            .sales {
+              color: #999;
+              font-size: 0.5rem;
+              margin-top: 0.2rem;
+            }
+            .price {
+              width: 100%;
+              color: #f60;
+              font-size: 0.6rem;
+              margin-top: 0.7rem;
+              position: relative;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              .dollar {
+                font-size: 0.5rem;
+                margin-right: 0.1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .cart {
+      position: fixed;
+      bottom: -2px;
+      z-index: 1000;
+      width: 100%;
+      height: 2rem;
+      background-color: rgba(61,61,63,.9);
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      div {
+        position: absolute;
+        top: -0.8rem;
+        left: 0.8rem;
+        border-radius: 50%;
+        border: 0.25rem solid #444;
+        width: 1.6rem;
+        height: 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &.empty {
+          background-color: #363636;
+        }
+        &.notEmpty {
+          background-color: #fff;
+        }
+        img {
+          width: 1.2rem;
+          height: 1.2rem;
+        }
+        .count {
+          background-image: linear-gradient(-90deg,#ff7416,#ff3c15 98%);
+          position: absolute;
+          font-size: 0.4rem;
+          width: 0.6rem;
+          height: 0.6rem;
+          border-radius: 50%;
+          color: #fff;
+          text-align: center;
+          line-height: 0.6rem;
+          right: -0.2rem;
+          top: -0.2rem;
+        }
+      }
+      .price {
+        display: flex;
+        flex-direction: column;
+        margin-left: 3.5rem;
+        span {
+          &:nth-child(1) {
+            font-size: 0.7rem;
+            color: white;
+          }
+          &:nth-child(2) {
+            font-size: 0.4rem;
+            color: #999;
+          }
+        }
+      }
+      > span {
+        font-size: 0.6rem;
+        color: white;
+        margin-right: 0.5rem;
+      }
+      .pay_btn {
+        background-color: #4cd964;
+        color: #fff;
+        height: 100%;
+        width: 3.5rem;
+        margin-right: 0px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .mask {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.4);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .cart_info {
+      position: fixed;
+      bottom: 0px;
+      padding-bottom: 2rem;
+      background-color: white;
+      width: 100%;
+      z-index: 100;
+      animation: goUp 0.25s linear;
+      .title {
+        padding: 0.35rem 0.5rem;
+        background: #f3f5f7;
+        border-bottom: 1px solid rgba(7,17,27,.1);
+        font-size: 0.55rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        span {
+          color: #00a0dc;
+        }
+      }
+      .scroll {
+        overflow: scroll;
+        max-height: 10rem;
+        .order {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0.5rem;
+          &:last-child {
+            margin-bottom: 0.5rem;
+          }
+          > p {
+            font-size: 0.6rem;
+            margin-left: 0.5rem;
+          }
+        }
+      }
+    }
+    .add_to_cart {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      .minus_btn {
+        width: 0.76rem;
+        height: 0.76rem;
+        display: inline-block;
+        text-align: center;
+        line-height: 0.76rem;
+        border: 0.02rem solid #2395ff;
+        border-radius: 50%;
+        font-size: 0.6rem;
+        color: #2395ff;
+      }
+      .add_btn {
+        width: 0.8rem;
+        height: 0.8rem;
+        display: inline-block;
+        text-align: center;
+        line-height: 0.8rem;
+        background-color: #2395ff;
+        border-radius: 50%;
+        font-size: 0.6rem;
+        color: white;
+      }
+      p {
+        font-size: 0.55rem;
+        color: #f01414;
+        margin-right: 1rem;
+      }
+      .num {
+        font-size: 0.55rem;
+        color: #666;
+        margin: 0px 0.5rem;
+      }
+    }
+    .goods_detail {
+      width: 100%;
+      background-color: white;
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100%;
+      transition: all 0.3s linear;
+      .showImg {
+        position: relative;
+        img {
+          width: 100%;
+        }
+        .desc {
+          font-size: 0.4rem;
+          color: #ddd;
+          background-color: rgba(0,0,0,0.4);
+          margin: 0.5rem;
+          position: absolute;
+          border-radius: 0.1rem;
+          padding: 0.1rem 0.2rem;
+          bottom: 0.5rem;
+        }
+      }
+      .arrow {
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: rgba(0,0,0,0.2);
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+        img {
+          width: 60%;
+          height: 60%;
+          margin: 20%;
+        }
+      }
+      .desc_detail {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 0.25rem 0.5rem;
+        border-bottom: 0.01rem solid #ccc;
+        .name {
+          color: #333;
+          font-size: 0.6rem;
+          font-weight: 900;
+        }
+        .sales {
+          font-size: 0.45rem;
+          color: #999;
+          margin: 0.2rem 0px;
+        }
+        .price {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          justify-content: space-between;
+          > span {
+            font-size: 0.6rem;
+            color: #f60;
+            margin: 0.5rem 0px;
+          }
+        }
+      }
+      .info_detail {
+        border-top: 0.3rem solid #eee;
+        .title {
+          font-size: 0.6rem;
+          margin: 0.5rem;
+          font-weight: 900;
+        }
+        .info {
+          font-size: 0.45rem;
+          margin: 0.5rem;
+        }
+      }
+    }
+    .ball{
+      position: fixed;
+      left: 32px;
+      bottom: 22px;
+      z-index: 200;
+      transition: all 0.4s cubic-bezier(0.49, -0.29, 0.75, 0.41); //贝塞尔曲线
+      .inner{
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: rgb(0,160,220);
+        transition: all 0.4s linear;
+      }
+    }
   }
 
   @keyframes goUp {
@@ -569,182 +684,11 @@
     }
   }
 
-  .cart_info .title {
-    padding: 0.35rem 0.5rem;
-    background: #f3f5f7;
-    border-bottom: 1px solid rgba(7,17,27,.1);
-    font-size: 0.55rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .cart_info .title span {
-    color: #00a0dc;
-  }
-
-  .cart_info .order {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem;
-  }
-
-  .cart_info .order:last-child {
-    margin-bottom: 0.5rem;
-  }
-
-  .cart_info .order>p {
-    font-size: 0.6rem;
-    margin-left: 0.5rem;
-  }
-
-  .add_to_cart {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-  }
-
-  .add_to_cart p {
-    font-size: 0.55rem;
-    color: #f01414;
-    margin-right: 1rem;
-  }
-
-  .add_to_cart .num {
-    font-size: 0.55rem;
-    color: #666;
-    margin: 0px 0.5rem;
-  }
-
-  .count {
-    background-image: linear-gradient(-90deg,#ff7416,#ff3c15 98%);
-    position: absolute;
-    font-size: 0.4rem;
-    width: 0.6rem;
-    height: 0.6rem;
-    border-radius: 50%;
-    color: #fff;
-    text-align: center;
-    line-height: 0.6rem;
-    right: -0.2rem;
-    top: -0.2rem;
-  }
-
-  .goods_detail {
-    width: 100%;
-    background-color: white;
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    transition: all 0.3s linear;
-  }
-
-  .goods_detail .showImg {
-    position: relative;
-  }
-
-  .goods_detail .showImg img {
-    width: 100%;
-  }
-
-  .goods_detail .desc {
-    font-size: 0.4rem;
-    color: #ddd;
-    background-color: rgba(0,0,0,0.4);
-    margin: 0.5rem;
-    position: absolute;
-    border-radius: 0.1rem;
-    padding: 0.1rem 0.2rem;
-    bottom: 0.5rem;
-  }
-
-  .goods_detail>.desc_detail {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 0.25rem 0.5rem;
-    border-bottom: 0.01rem solid #ccc;
-  }
-
-  .goods_detail>.desc_detail .name {
-    color: #333;
-    font-size: 0.6rem;
-    font-weight: 900;
-  }
-
-  .goods_detail>.desc_detail .sales {
-    font-size: 0.45rem;
-    color: #999;
-    margin: 0.2rem 0px;
-  }
-
-  .goods_detail>.desc_detail .price {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .goods_detail>.desc_detail .price>span {
-    font-size: 0.6rem;
-    color: #f60;
-    margin: 0.5rem 0px;
-  }
-
-  .info_detail {
-    border-top: 0.3rem solid #eee;
-  }
-
-  .info_detail .title {
-    font-size: 0.6rem;
-    margin: 0.5rem;
-    font-weight: 900;
-  }
-
-  .info_detail .info {
-    font-size: 0.45rem;
-    margin: 0.5rem;
-  }
-
-  .arrow {
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: rgba(0,0,0,0.2);
-    position: absolute;
-    top: 0rem;
-    left: 0rem;
-  }
-
-  .arrow img {
-    width: 60%;
-    height: 60%;
-    margin: 20%;
-  }
-
   .move-enter {
     transform: translateX(100%);
   }
 
   .move-leave, .move-leave-active {
     transform: translateX(100%);
-  }
-
-  .ball{
-    position: fixed;
-    left: 32px;
-    bottom: 22px;
-    z-index: 200;
-    transition: all 0.4s cubic-bezier(0.49, -0.29, 0.75, 0.41); /*贝塞尔曲线*/
-  }
-
-  .inner{
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: rgb(0,160,220);
-    transition: all 0.4s linear;
   }
 </style>

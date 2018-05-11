@@ -15,21 +15,16 @@
   }
 </script>
 
-<style scoped>
-  div {
+<style scoped lang="sass">
+  div
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: center;
-  }
-
-  img.loadMore {
-    width: 0.8rem;
-    height: 0.8rem;
-  }
-
-  span.text {
-    font-size: 0.5rem;
-    margin-left: 0.5rem;
-  }
+    img.loadMore
+      width: 0.8rem;
+      height: 0.8rem;
+    span.text
+      font-size: 0.5rem;
+      margin-left: 0.5rem;
 </style>

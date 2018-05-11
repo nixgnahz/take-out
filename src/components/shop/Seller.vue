@@ -60,120 +60,117 @@
   }
 </script>
 
-<style scoped>
-  .top, .middle, .bottom {
+<style scoped lang="scss">
+  @mixin part {
     background-color: white;
     padding: 0.6rem;
     border-bottom: 0.35rem solid #eee;
     position: relative;
+    .bold {
+      font-size: 0.65rem;
+      font-weight: bold;
+      margin: 0.2rem 0px 0.4rem;
+    }
   }
 
-  .bold {
-    font-size: 0.65rem;
-    font-weight: bold;
-    margin: 0.2rem 0px 0.4rem;
+  .top {
+    @include part;
+    .express {
+      font-size: 0.5rem;
+      span {
+        &:nth-child(1) {
+          color: #fff;
+          background-color: #0097ff;
+          padding: 0.05rem 0.1rem;
+          border-radius: 2px;
+           margin-right: 0.25rem;
+        }
+        &:nth-child(2) {
+          color: #666;
+        }
+      }
+    }
+    .price {
+      margin: 0.5rem 0px;
+      color: #666;
+      font-size: 0.5rem;
+    }
+    .collect {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      position: absolute;
+      right: 0.5rem;
+      top: 1.5rem;
+      font-size: 0.4rem;
+      justify-content: center;
+      width: 1.8rem;
+      .icon {
+        font-size: 24px;
+        line-height: 24px;
+        &.active {
+          color: #f01414;
+        }
+        &.inactive {
+          color: #d4d6d9;
+        }
+        &:before {
+          content: "\2764";
+        }
+      }
+    }
   }
 
-  .express {
-    font-size: 0.5rem;
+  .middle {
+    @include part;
+    .word {
+      font-size: 0.5rem;
+      color: #666;
+      margin: 0.6rem 0px;
+      span {
+        font-size: 0.4rem;
+        color: white;
+        padding: 0.05rem;
+        margin-right: 0.5rem;
+      }
+    }
+    .invoice {
+      font-size: 0.4rem;
+      span {
+        border: 1px solid rgb(153, 153, 153);
+        color: rgb(153, 153, 153);
+        padding: 0rem 0.3rem;
+        margin-right: 0.5rem;
+      }
+    }
   }
 
-  .express span:nth-child(1) {
-    color: #fff;
-    background-color: #0097ff;
-    padding: 0.05rem 0.1rem;
-    border-radius: 2px;
-    margin-right: 0.25rem;
-  }
-
-  .express span:nth-child(2) {
-    color: #666;
-  }
-
-  .price {
-    margin: 0.5rem 0px;
-    color: #666;
-    font-size: 0.5rem;
-  }
-
-  .middle .word {
-    font-size: 0.5rem;
-    color: #666;
-    margin: 0.6rem 0px;
-  }
-
-  .middle .word span {
-    font-size: 0.4rem;
-    color: white;
-    padding: 0.05rem;
-    margin-right: 0.5rem;
-  }
-
-  .middle .invoice {
-    font-size: 0.4rem;
-  }
-
-  .middle .invoice span {
-    border: 1px solid rgb(153, 153, 153);
-    color: rgb(153, 153, 153);
-    padding: 0rem 0.3rem;
-    margin-right: 0.5rem;
-  }
-
-  .bottom .desc {
-    font-size: 0.5rem;
-    color: #999;
-    padding: 0.2rem 0px 0.4rem;
-  }
-
-  .bottom div {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 0.4rem 0px;
-    border-top: 1px solid #ddd;
-  }
-
-  .bottom div:last-child {
-    padding-bottom: 0px;
-  }
-
-  .bottom div p:nth-child(1) {
-    font-size: 0.6rem;
-    font-weight: bold;
-    margin-right: 0.5rem;
-  }
-
-  .bottom div p:nth-child(2) {
-    font-size: 0.5rem;
-  }
-
-  .collect {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    position: absolute;
-    right: 0.5rem;
-    top: 1.5rem;
-    font-size: 0.4rem;
-    justify-content: center;
-    width: 1.8rem;
-  }
-
-  .collect .icon {
-    font-size: 24px;
-    line-height: 24px;
-  }
-
-  .active {
-    color: #f01414;
-  }
-
-  .inactive {
-    color: #d4d6d9;
-  }
-
-  .icon:before {
-    content: "\2764";
+  .bottom {
+    @include part;
+    .desc {
+      font-size: 0.5rem;
+      color: #999;
+      padding: 0.2rem 0px 0.4rem;
+    }
+    div {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 0.4rem 0px;
+      border-top: 1px solid #ddd;
+      &:last-child {
+        padding-bottom: 0px;
+      }
+      p {
+        &:nth-child(1) {
+          font-size: 0.6rem;
+          font-weight: bold;
+          margin-right: 0.5rem;
+        }
+        &:nth-child(2) {
+          font-size: 0.5rem;
+        }
+      }
+    }
   }
 </style>

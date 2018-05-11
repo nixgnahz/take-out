@@ -80,32 +80,31 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+  @mixin flex-align {
+    align-items: center;
+    display: flex;
+  }
+
   ul {
     background-color: white;
-    align-items: center;
-    display: flex;
+    @include flex-align;
     flex-wrap: wrap;
     padding: 0.4rem 0px;
-  }
-
-  ul li {
-    width: 20%;
-    font-size: 0.45rem;
-    margin: 0.2rem 0px;
-  }
-
-  ul li a {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  ul li img {
-    width: 60%;
-  }
-
-  ul li p {
-    color: #666;
+    li {
+      width: 20%;
+      font-size: 0.45rem;
+      margin: 0.2rem 0px;
+      a {
+        @include flex-align;
+        flex-direction: column;
+      }
+      img {
+        width: 60%;
+      }
+      p {
+        color: #666;
+      }
+    }
   }
 </style>

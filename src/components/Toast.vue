@@ -10,7 +10,7 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   .mask {
     position: fixed;
     bottom: 4rem;
@@ -19,15 +19,14 @@
     align-items: center;
     width: 100%;
     justify-content: center;
-  }
-
-  .mask p {
-    background-color: #666666;
-    color: #ffffff;
-    font-size: 0.55rem;
-    padding: 0.35rem 0.95rem;
-    border-radius: 1rem;
-    animation: opacity 4s linear 1;
+    p {
+      background-color: #666666;
+      color: #ffffff;
+      font-size: 0.55rem;
+      padding: 0.35rem 0.95rem;
+      border-radius: 1rem;
+      animation: opacity 4s linear 1;
+    }
   }
 
   @keyframes opacity {

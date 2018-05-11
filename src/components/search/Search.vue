@@ -106,90 +106,66 @@
   }
 </script>
 
-<style scoped>
-  .input {
+<style scoped lang="sass">
+  .input
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
     padding: 0.5rem;
-  }
+    a
+      font-size: 0px;
+      img.back
+        width: 0.8rem;
+        height: 0.8rem;
+    form
+      width: 10rem;
+      padding: 0px 0.5rem;
+      background-color: #f8f8f8;
+      height: 1.2rem;
+      display: flex;
+      align-items: center;
+      img.search
+        width: 0.8rem;
+        height: 0.8rem;
+      input
+        width: 100%;
+        height: 1rem;
+        background-color: #f8f8f8;
+        -webkit-appearance: none;
+        border: none;
+        padding: 0rem 0.2rem;
+        color: #666;
+        &focus
+          border: 0px;
+          outline: none;
+    span
+      font-size: 0.6rem;
+      color: #333;
 
-  a {
-    font-size: 0px;
-  }
-
-  img.back {
-    width: 0.8rem;
-    height: 0.8rem;
-  }
-
-  form {
-    width: 10rem;
-    padding: 0px 0.5rem;
-    background-color: #f8f8f8;
-    height: 1.2rem;
-    display: flex;
-    align-items: center;
-  }
-
-  img.search {
-    width: 0.8rem;
-    height: 0.8rem;
-  }
-
-  input {
-    width: 100%;
-    height: 1rem;
-    background-color: #f8f8f8;
-    -webkit-appearance: none;
-    border: none;
-    padding: 0rem 0.2rem;
-    color: #666;
-  }
-
-  input:focus {
-    border: 0px;
-    outline:none;
-  }
-
-  span {
-    font-size: 0.6rem;
-    color: #333;
-  }
-
-  .boxes {
+  .boxes
     padding: 0.5rem;
     position: relative;
-  }
-
-  .boxes .title {
-    font-size: 0.65rem;
-    margin: 0.25rem;
-    color: #666;
-  }
-
-  .boxes img {
-    width: 0.6rem;
-    height: 0.6rem;
-    position: absolute;
-    right: 0.5rem;
-    top: 0.9rem;
-  }
-
-  .boxes ul {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .boxes ul li {
-    padding: 0.3rem 0.5rem;
-    font-size: 0.55rem;
-    color: #666;
-    background-color: #f7f7f7;
-    margin: 0.25rem;
-    border-radius: 0.1rem;
-  }
+    .title
+      font-size: 0.65rem;
+      margin: 0.25rem;
+      color: #666;
+    img
+      width: 0.6rem;
+      height: 0.6rem;
+      position: absolute;
+      right: 0.5rem;
+      top: 0.9rem;
+    ul
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      li
+        padding: 0.3rem 0.5rem;
+        font-size: 0.55rem;
+        color: #666;
+        background-color: #f7f7f7;
+        margin: 0.25rem;
+        border-radius: 0.1rem;
 </style>

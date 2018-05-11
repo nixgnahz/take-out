@@ -77,99 +77,83 @@
   }
 </script>
 
-<style scoped>
-  input.sign {
-    width: 95%;
-    padding-left: 5%;
-    height: 1.85rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 0.4rem 0px;
-  }
-
+<style scoped lang="scss">
   .form {
     width: 80%;
     margin: 0rem 10%;
-  }
-
-  form div{
-    width: 100%;
-  }
-
-  .form button.sign {
-    background: #4cd96f;
-    color: white;
-    width: 100%;
-    height: 1.8rem;
-    font-size: 0.6rem;
-    border-radius: 5px;
-    margin-top: 1rem;
-  }
-
-  .row {
-    line-height: 60px;
-    text-align: center;
-  }
-
-  .pwd {
-    position: relative;
-  }
-
-  .pwd .row {
-    position: absolute;
-    top: 0.2rem;
-    right: 0rem;
-  }
-
-  input[type="checkbox"] {
-    display: none;
-  }
-
-  input[type="checkbox"] + label {
-    display: inline-block;
-    width: 40px;
-    height: 20px;
-    position: relative;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    margin: 0px 20px;
-    box-sizing: border-box;
-  }
-
-  input[type="checkbox"] + label:after {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 20px;
-    height: 20px;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    cursor: pointer;
-  }
-
-  #show:checked + label.red {
-    background: #ECA9A7;
-  }
-
-  #show:checked + label.red:after,{
-    background: #D9534F;
-  }
-
-  #show:checked + label:after {
-    left: calc(100% - 20px);
-  }
-
-  #show + label {
-    background: #ddd;
-    border-radius: 20px;
-    box-shadow: 1px 1px 3px #aaa;
-  }
-
-  #show + label:after {
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: 1px 1px 3px #aaa;
+    form {
+      input.sign {
+        width: 95%;
+        padding-left: 5%;
+        height: 1.85rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin: 0.4rem 0px;
+      }
+      div.pwd {
+        position: relative;
+        width: 100%;
+        .row {
+          line-height: 60px;
+          text-align: center;
+          position: absolute;
+          top: 0.2rem;
+          right: 0rem;
+        }
+        input[type="checkbox"] {
+          display: none;
+        }
+        input[type="checkbox"] + label {
+          display: inline-block;
+          width: 40px;
+          height: 20px;
+          position: relative;
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+          margin: 0px 20px;
+          box-sizing: border-box;
+        }
+        input[type="checkbox"] + label:after {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          width: 20px;
+          height: 20px;
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+          cursor: pointer;
+        }
+        #show:checked + label.red {
+          background: #ECA9A7;
+        }
+        #show:checked + label.red:after,{
+          background: #D9534F;
+        }
+        #show:checked + label:after {
+          left: calc(100% - 20px);
+        }
+        #show + label {
+          background: #ddd;
+          border-radius: 20px;
+          box-shadow: 1px 1px 3px #aaa;
+        }
+        #show + label:after {
+          background: #fff;
+          border-radius: 50%;
+          box-shadow: 1px 1px 3px #aaa;
+        }
+      }
+      button.sign {
+        background: #4cd96f;
+        color: white;
+        width: 100%;
+        height: 1.8rem;
+        font-size: 0.6rem;
+        border-radius: 5px;
+        margin-top: 1rem;
+      }
+    }
   }
 </style>

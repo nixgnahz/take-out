@@ -36,57 +36,42 @@
   }
 </script>
 
-<style scoped>
-  .top {
-    width: 100%;
-    background-image: linear-gradient(90deg,#0af,#0085ff);
-    display: block;
-    text-align: center;
-    flex-direction: row;
-    padding: 0.2rem;
-    line-height: 1.3rem;
-    position: relative;
-  }
-
-  a {
-    font-size: 0px;
-    position: absolute;
-    left: 0.5rem;
-    top: 0.5rem;
-  }
-
-  a img {
-    width: 0.8rem;
-    height: 0.8rem;
-  }
-
-  .top span {
-    font-size: 0.6rem;
-    color: white;
-  }
-
-  .body {
+<style scoped lang="sass">
+  .body
     width: 100%;
     background-color: white;
     position: absolute;
     min-height: 100%;
-  }
-
-  ul li {
-    margin: 0.75rem;
-  }
-
-  ul li .title {
-    font-size: 0.6rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 0.4rem;
-  }
-
-  ul li .desc {
-    color: #999;
-    font-size: 0.5rem;
-    margin: 0.4rem 0px;
-    line-height: 0.8rem;
-  }
+    .top
+      width: 100%;
+      background-image: linear-gradient(90deg,#0af,#0085ff);
+      display: block;
+      text-align: center;
+      flex-direction: row;
+      padding: 0.2rem;
+      line-height: 1.3rem;
+      position: relative;
+      a
+        font-size: 0px;
+        position: absolute;
+        left: 0.5rem;
+        top: 0.5rem;
+        img
+          width: 0.8rem;
+          height: 0.8rem;
+      span
+        font-size: 0.6rem;
+        color: white;
+    ul li
+      margin: 0.75rem;
+      .title
+        font-size: 0.6rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 0.4rem;
+      .desc
+        color: #999;
+        font-size: 0.5rem;
+        margin: 0.4rem 0px;
+        line-height: 0.8rem;
 </style>

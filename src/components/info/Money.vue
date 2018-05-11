@@ -37,7 +37,7 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   ul {
     display: flex;
     align-items: center;
@@ -46,29 +46,25 @@
     font-size: 0.4rem;
     border-bottom: 1px solid #ddd;
     background-color: #fff;
-  }
-
-  ul li {
-    flex: 1;
-    padding: 0.5rem 0px;
-    border-right: 1px solid #ddd;
-  }
-
-  ul li a {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    color: #999;
-    justify-content: center;
-  }
-
-  ul li:last-child {
-    border: 0px;
-  }
-
-  ul li img {
-    width: 1.1rem;
-    height: 1.1rem;
-    margin: 0.25rem;
+    li {
+      flex: 1;
+      padding: 0.5rem 0px;
+      border-right: 1px solid #ddd;
+      a {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        color: #999;
+        justify-content: center;
+      }
+      &:last-child {
+        border: 0px;
+      }
+      img {
+        width: 1.1rem;
+        height: 1.1rem;
+        margin: 0.25rem;
+      }
+    }
   }
 </style>

@@ -75,8 +75,8 @@
   }
 </script>
 
-<style scoped>
-  .title {
+<style scoped lang="sass">
+  .title
     width: 100%;
     background-image: linear-gradient(90deg,#0af,#0085ff);
     display: block;
@@ -87,121 +87,84 @@
     position: relative;
     font-size: 0.6rem;
     color: #fff;
-  }
 
-  ul {
+  ul
     background-color: white;
-  }
+    li > a
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0.5rem;
+      .top
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        img
+          width: 1.5rem;
+          height: 1.5rem;
+          border: 0.3px solid #eee;
+          margin-right: 0.5rem;
+        .right
+          display: flex;
+          flex: 1;
+          align-items: flex-start;
+          flex-direction: column;
+          > div
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #eee;
+          .name
+            color: #333;
+            font-size: 0.6rem;
+          .time
+            font-size: 0.5rem;
+            color: #999;
+            margin: 0.2rem 0px 0.3rem;
+          .status
+            font-size: 0.5rem;
+            color: #666;
+          .dishes
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0.35rem 0px;
+            .price
+              font-size: 0.5rem;
+              color: #333;
+              font-weight: 700;
+          .dish
+            font-size: 0.55rem;
+            color: #666;
+      .bottom
+        align-self: flex-end;
+        margin: 0.35rem 0.5rem 0.15rem;
+        a
+          color: #2395ff;
+          font-size: 0.5rem;
+          border: 1px solid #2395ff;
+          padding: 0.2rem 0.7rem;
+          border-radius: 5px;
 
-  ul li>a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0.5rem;
-  }
-
-  ul li .top {
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
-  }
-
-  ul li .top img {
-    width: 1.5rem;
-    height: 1.5rem;
-    border: 0.3px solid #eee;
-    margin-right: 0.5rem;
-  }
-
-  ul li .top .right {
-    display: flex;
-    flex: 1;
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  ul li .top .right>div {
-    width: 100%;
-    display: flex;
-    align-items:center;
-    justify-content: space-between;
-    border-bottom: 1px solid #eee;
-  }
-
-  ul li .top .right .name {
-    color: #333;
-    font-size: 0.6rem;
-  }
-
-  ul li .top .right .time {
-    font-size: 0.5rem;
-    color: #999;
-    margin: 0.2rem 0px 0.3rem;
-  }
-
-  ul li .top .right .status {
-    font-size: 0.5rem;
-    color: #666;
-  }
-
-  ul li .top .right .dishes {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0.35rem 0px;
-  }
-
-  ul li .top .right .dish {
-    font-size: 0.55rem;
-    color: #666;
-  }
-
-  ul li .top .right .dishes .price {
-    font-size: 0.5rem;
-    color: #333;
-    font-weight: 700;
-  }
-
-  ul li .bottom {
-    align-self: flex-end;
-    margin: 0.35rem 0.5rem 0.15rem;
-  }
-
-  ul li .bottom a{
-    color: #2395ff;
-    font-size: 0.5rem;
-    border: 1px solid #2395ff;
-    padding: 0.2rem 0.7rem;
-    border-radius: 5px;
-  }
-
-  .tip {
+  .tip
     display: flex;
     align-items: center;
     flex-direction: column;
-  }
-
-  .tip img {
-    margin-top: 2rem;
-  }
-
-  .tip .word {
-    font-size: 0.7rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .tip button {
-    background-color: #56d176;
-    width: 5rem;
-    height: 1.5rem;
-    border-radius: 4px;
-    font-size: 0.6rem;
-  }
-
-  .tip button a {
-    color: #fff;
-  }
+    img
+      margin-top: 2rem;
+    .word
+      font-size: 0.7rem;
+      margin-bottom: 0.5rem;
+    button
+      background-color: #56d176;
+      width: 5rem;
+      height: 1.5rem;
+      border-radius: 4px;
+      font-size: 0.6rem;
+      a
+        color: #fff;
 </style>

@@ -20,37 +20,36 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+  $gradient: linear-gradient(90deg,#0af,#0085ff);
+  $img-size: 1rem;
+
   .top {
-    background-image: linear-gradient(90deg,#0af,#0085ff);
+    background-image: $gradient;
     padding: 0.7rem 0rem;
-  }
-
-  .top .position {
-    font-size: 0.65rem;
-    padding: 0px 0.8rem;
-    color: white;
-  }
-
-  .top .search {
-    padding: 0.5rem 0.8rem;
-  }
-
-  .top .search a{
-    background-color: white;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    font-size: 0.5rem;
-    height: 1.4rem;
-    justify-content: center;
-    border-radius: 2px;
-    color: #999;
-  }
-
-  .top .search img {
-    width: 1rem;
-    height: 1rem;
-    margin-right: 0.2rem;
+    .position {
+      font-size: 0.65rem;
+      padding: 0px 0.8rem;
+      color: white;
+    }
+    .search {
+      padding: 0.5rem 0.8rem;
+      a {
+        background-color: white;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        font-size: 0.5rem;
+        height: 1.4rem;
+        justify-content: center;
+        border-radius: 2px;
+        color: #999;
+      }
+      img {
+        width: $img-size;
+        height: $img-size;
+        margin-right: 0.2rem;
+      }
+    }
   }
 </style>

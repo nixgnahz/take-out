@@ -13,10 +13,9 @@
   }
 </script>
 
-<style scoped>
-  .body {
+<style scoped lang="sass">
+  .body
     background-color: white;
     height: 100%;
     position: absolute;
-  }
 </style>

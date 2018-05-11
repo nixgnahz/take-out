@@ -54,55 +54,47 @@
   }
 </script>
 
-<style scoped>
-  .tel {
-    position: relative;
-  }
-
-  .tel button.psw {
-    position: absolute;
-    right: 0rem;
-    top: 0.45rem;
-    color: #999;
-    padding: 0.6rem 0.5rem;
-    background-color: transparent;
-  }
-
-  .tip {
-    color: #999;
-    font-size: 0.5rem;
-    margin-top: 0.5rem;
-  }
-
-  .tip a {
-    color: #2395ff;
-  }
-
-  input.sign {
-    width: 95%;
-    padding-left: 5%;
-    height: 1.85rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 0.4rem 0px;
-  }
-
+<style scoped lang="scss">
   .form {
     width: 80%;
     margin: 0rem 10%;
-  }
-
-  form div{
-    width: 100%;
-  }
-
-  .form button.sign {
-    background: #4cd96f;
-    color: white;
-    width: 100%;
-    height: 1.8rem;
-    font-size: 0.6rem;
-    border-radius: 5px;
-    margin-top: 1rem;
+    form {
+      .tel {
+        position: relative;
+        button.psw {
+          position: absolute;
+          right: 0rem;
+          top: 0.45rem;
+          color: #999;
+          padding: 0.6rem 0.5rem;
+          background-color: transparent;
+        }
+      }
+      input.sign {
+        width: 95%;
+        padding-left: 5%;
+        height: 1.85rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin: 0.4rem 0px;
+      }
+      .tip {
+        color: #999;
+        font-size: 0.5rem;
+        margin-top: 0.5rem;
+        a {
+          color: #2395ff;
+        }
+      }
+      button.sign {
+        background: #4cd96f;
+        color: white;
+        width: 100%;
+        height: 1.8rem;
+        font-size: 0.6rem;
+        border-radius: 5px;
+        margin-top: 1rem;
+      }
+    }
   }
 </style>

@@ -64,46 +64,38 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   .tabBar {
     width: 100%;
     position: fixed;
     bottom: 0px;
     z-index: 1000;
-  }
-
-  ul {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    flex-direction: row;
-    box-shadow: 0 -0.266667vw 0.533333vw rgba(0,0,0,0.1);
-    background-color: white;
-  }
-
-  ul li {
-    flex: 1;
-    font-size: 0.45rem;
-    padding: 0.3rem 0px 0px;
-  }
-
-  ul li a {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  ul li img {
-    width: 0.75rem;
-    height: 0.75rem;
-    margin-bottom: 0.05rem;
-  }
-
-  ul li a {
-    color: #8e8e93;
-  }
-
-  .router-link-exact-active p {
-    color: #0089dc;
+    ul {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      flex-direction: row;
+      box-shadow: 0 -0.266667vw 0.533333vw rgba(0,0,0,0.1);
+      background-color: white;
+      li {
+        flex: 1;
+        font-size: 0.45rem;
+        padding: 0.3rem 0px 0px;
+        a {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          color: #8e8e93;
+        }
+        img {
+          width: 0.75rem;
+          height: 0.75rem;
+          margin-bottom: 0.05rem;
+        }
+        .router-link-exact-active p {
+          color: #0089dc;
+        }
+      }
+    }
   }
 </style>

@@ -32,8 +32,8 @@
   }
 </script>
 
-<style scoped>
-  ul {
+<style scoped lang="sass">
+  ul
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -42,22 +42,15 @@
     background-color: white;
     padding: 0.5rem 0px;
     border-bottom: 1px solid #ddd;
-  }
-
-  ul li {
-    flex: 1;
-    text-align: center;
-  }
-
-  ul li a {
-    border-bottom: 1px solid transparent;
-    padding: 0.5rem 0px;
-    color: #666;
-  }
-
-  .router-link-exact-active {
-    border-bottom: 1px solid #2395ff;
-    color: #2395ff;
-    color: #333;
-  }
+    li
+      flex: 1;
+      text-align: center;
+      a
+        border-bottom: 1px solid transparent;
+        padding: 0.5rem 0px;
+        color: #666;
+        &.router-link-exact-active
+         border-bottom: 1px solid #2395ff;
+         color: #2395ff;
+         color: #333;
 </style>

@@ -14,13 +14,12 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   div {
     background-color: white;
-  }
-
-  div img {
-    width: 90%;
-    margin: 0.25rem 5%;
+    img {
+      width: 90%;
+      margin: 0.25rem 5%;
+    }
   }
 </style>

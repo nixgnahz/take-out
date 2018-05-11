@@ -113,7 +113,7 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   .top {
     display: flex;
     align-items: center;
@@ -121,166 +121,146 @@
     padding: 0.75rem 0px;
     background-color: white;
     border-bottom: 10px solid #eee;
-  }
-
-  .top .general {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 30%;
-    border-right: 1px solid #ddd;
-  }
-
-  .top .general .score {
-    color: #ff6000;
-    font-weight: bold;
-  }
-
-  .top .general p:nth-child(n+2) {
-    font-size: 0.45rem;
-    color: #999;
-    margin: 0.1rem 0px;
-  }
-
-  .top .detail {
-    padding-left: 1rem;
-    display: flex;
-    flex-direction: column;
-    font-size: 0.5rem;
-  }
-
-  .top .detail p {
-    margin: 0.2rem 0px;
-    color: #999;
-  }
-
-  .top .detail p span {
-    margin-left: 0.5rem;
-  }
-
-  .top .detail p .score {
-    color: #ff6000;
+    .general {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 30%;
+      border-right: 1px solid #ddd;
+      .score {
+        color: #ff6000;
+        font-weight: bold;
+      }
+      p {
+        &:nth-child(n+2) {
+          font-size: 0.45rem;
+          color: #999;
+          margin: 0.1rem 0px;
+        }
+      }
+    }
+    .detail {
+      padding-left: 1rem;
+      display: flex;
+      flex-direction: column;
+      font-size: 0.5rem;
+      p {
+        margin: 0.2rem 0px;
+        color: #999;
+        span {
+          margin-left: 0.5rem;
+        }
+        .score {
+          color: #ff6000;
+        }
+      }
+    }
   }
 
   .bottom {
     background-color: white;
-  }
-
-  .bottom .menu {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    font-size: 0.5rem;
-    flex-wrap: wrap;
-    padding: 0.4rem 0px;
-  }
-
-  .bottom .menu li {
-    padding: 0.2rem 0.3rem;
-    border-radius: 2px;
-    margin: 0.2rem;
-  }
-
-  .bottom .detail li {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
-    padding: 0.5rem;
-    border-top: 1px solid #eee;
-  }
-
-  .bottom .detail li>img {
-    width: 1.4rem;
-    heigth: 1.4rem;
-    border-radius: 50%;
-    margin-right: 0.5rem;
-  }
-
-  .bottom .detail li div .name {
-    color: #333;
-    font-size: 0.55rem;
-  }
-
-  .bottom .detail li div .name span {
-    font-size: 0.4rem;
-    color: #999;
-    margin-left: 0.5rem;
-  }
-
-  .bottom .detail li div .desc {
-    color: #333;
-    font-size: 0.55rem;
-    margin: 0.25rem 0px;
-  }
-
-  .bottom .detail li div img {
-    width: 4rem;
-    height: 4rem;
-  }
-
-  .bottom .detail li div .labels {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    font-size: 0.5rem;
-    color: #6d7885;
-  }
-
-  .bottom .detail li div .labels span {
-    padding: 0.1rem 0.25rem;
-    border: 1px solid #eee;
-    margin: 0.25rem 0.25rem 0.25rem 0px;
-    border-radius: 2px;
-  }
-
-  .active {
-    background-color: #0097ff !important;
-    color: #fff;
-  }
-
-  .good {
-    background-color: #ebf5ff;
-  }
-
-  .bad {
-    background-color: #f5f5f5;
-  }
-
-  .choice_box {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    margin: 0rem 0.5rem;
-    padding: 0.5rem 0px;
-    border-top: 1px solid rgba(7,17,27,.1);
-  }
-
-  .choice_box .choice {
-    color: #fff;
-    width: 0.85rem;
-    height: 0.85rem;
-    line-height: 0.85rem;
-    text-align:center;
-    border-radius: 50%;
-    font-weight: lighter;
-    font-size: 0.6rem;
-  }
-
-  .choice.selected {
-    background-color: #00c850;
-  }
-
-  .choice.unselected {
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-
-  .choice:after {
-    content: '\2713';
-  }
-
-  .choice_box .text {
-    font-size: 0.5rem;
-    margin-left: 0.3rem;
+    .menu {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      font-size: 0.5rem;
+      flex-wrap: wrap;
+      padding: 0.4rem 0px;
+      li {
+        padding: 0.2rem 0.3rem;
+        border-radius: 2px;
+        margin: 0.2rem;
+        &.active {
+          background-color: #0097ff !important;
+          color: #fff;
+        }
+        &.good {
+          background-color: #ebf5ff;
+        }
+        &.bad {
+          background-color: #f5f5f5;
+        }
+      }
+    }
+    .choice_box {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      margin: 0rem 0.5rem;
+      padding: 0.5rem 0px;
+      border-top: 1px solid rgba(7,17,27,.1);
+      .choice {
+        color: #fff;
+        width: 0.85rem;
+        height: 0.85rem;
+        line-height: 0.85rem;
+        text-align:center;
+        border-radius: 50%;
+        font-weight: lighter;
+        font-size: 0.6rem;
+        &.selected {
+          background-color: #00c850;
+        }
+        &.unselected {
+          background-color: rgba(0, 0, 0, 0.2);
+        }
+        &:after {
+          content: '\2713';
+        }
+      }
+      .text {
+        font-size: 0.5rem;
+        margin-left: 0.3rem;
+      }
+    }
+    .detail {
+      li {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        padding: 0.5rem;
+        border-top: 1px solid #eee;
+        > img {
+          width: 1.4rem;
+          heigth: 1.4rem;
+          border-radius: 50%;
+          margin-right: 0.5rem;
+        }
+        div {
+          .name {
+            color: #333;
+            font-size: 0.55rem;
+            span {
+              font-size: 0.4rem;
+              color: #999;
+              margin-left: 0.5rem;
+            }
+          }
+          .desc {
+            color: #333;
+            font-size: 0.55rem;
+            margin: 0.25rem 0px;
+          }
+          .labels {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            font-size: 0.5rem;
+            color: #6d7885;
+            span {
+              padding: 0.1rem 0.25rem;
+              border: 1px solid #eee;
+              margin: 0.25rem 0.25rem 0.25rem 0px;
+              border-radius: 2px;
+            }
+          }
+          img {
+            width: 4rem;
+            height: 4rem;
+          }
+        }
+      }
+    }
   }
 </style>

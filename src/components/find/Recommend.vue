@@ -43,7 +43,7 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   ul {
     display: flex;
     align-items: center;
@@ -51,37 +51,34 @@
     flex-wrap: wrap;
     background-color: white;
     margin-bottom: 0.25rem;
-  }
-
-  ul li {
-    flex: 1;
-    max-width: 50%;
-    min-width: 40%;
-    border-bottom: 1px solid #ededed;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0.6rem 0.4rem;
-  }
-
-  ul li:nth-child(2n) {
-    border-left: 1px solid #ededed;
-  }
-
-  ul li .left p.title{
-    font-size: 0.6rem;
-    color: rgb(255, 153, 0);
-  }
-
-  ul li .left p.desc{
-    font-size: 0.5rem;
-    color: #999;
-    margin-top: 0.2rem;
-  }
-
-  ul li img {
-    width: 2rem;
-    height: 2rem;
+    li {
+      flex: 1;
+      max-width: 50%;
+      min-width: 40%;
+      border-bottom: 1px solid #ededed;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0.6rem 0.4rem;
+      .left {
+        p.desc{
+          font-size: 0.5rem;
+          color: #999;
+          margin-top: 0.2rem;
+        }
+        p.title{
+          font-size: 0.6rem;
+          color: rgb(255, 153, 0);
+        }
+      }
+      img {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+    li:nth-child(2n) {
+      border-left: 1px solid #ededed;
+    }
   }
 </style>

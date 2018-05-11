@@ -49,38 +49,33 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   div {
     background-color: white;
-  }
-
-  .title {
-    border-bottom: 1px solid #eee;
-    font-weight: 600;
-    font-size: 0.6rem;
-    padding: 1rem 0.5rem 0.5rem;
-  }
-
-  ul li {
-    padding: 0.5rem;
-    border-bottom: 1px solid #eee;
-  }
-
-  ul li a {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  ul li p {
-    font-size: 0.55rem;
-    color: #999;
-  }
-
-  ul li img {
-    width: 0.6rem;
-    height: 0.6rem;
-    transform: rotate(180deg);
+    .title {
+      border-bottom: 1px solid #eee;
+      font-weight: 600;
+      font-size: 0.6rem;
+      padding: 1rem 0.5rem 0.5rem;
+    }
+    ul li {
+      padding: 0.5rem;
+      border-bottom: 1px solid #eee;
+      a {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      p {
+        font-size: 0.55rem;
+        color: #999;
+      }
+      img {
+        width: 0.6rem;
+        height: 0.6rem;
+        transform: rotate(180deg);
+      }
+    }
   }
 </style>

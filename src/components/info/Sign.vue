@@ -30,9 +30,11 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+  $gradient: linear-gradient(90deg,#0af,#0085ff);
+
   .title {
-    background-image: linear-gradient(90deg,#0af,#0085ff);
+    background-image: $gradient;
     padding: 0.45rem;
     font-size: 0.65rem;
     color: white;
@@ -40,31 +42,32 @@
   }
 
   .sign {
-    background-image: linear-gradient(90deg,#0af,#0085ff);
+    background-image: $gradient;
     color: white;
     display: flex;
     align-items: center;
-  }
-
-  .sign img {
-    width: 2.4rem;
-    height: 2.4rem;
-    border-radius: 50%;
-    background-color: white;
-    margin: 1rem;
-  }
-
-  .sign div p:nth-child(1) a {
-    font-size: 0.75rem;
-    white-space: nowrap;
-    margin-bottom: 0.3rem;
-    text-overflow: ellipsis;
-    color: white;
-  }
-
-  .sign div p:nth-child(2) {
-    font-size: 0.5rem;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    img {
+      width: 2.4rem;
+      height: 2.4rem;
+      border-radius: 50%;
+      background-color: white;
+      margin: 1rem;
+    }
+    div p {
+      &:nth-child(1) {
+        a {
+          font-size: 0.75rem;
+          white-space: nowrap;
+          margin-bottom: 0.3rem;
+          text-overflow: ellipsis;
+          color: white;
+        }
+      }
+      &:nth-child(2) {
+        font-size: 0.5rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
   }
 </style>

@@ -14,8 +14,8 @@
   }
 </script>
 
-<style scoped>
-  div {
+<style scoped lang="sass">
+  div
     position: fixed;
     bottom: 3rem;
     right: 0.5rem;
@@ -24,11 +24,8 @@
     width: 1.7rem;
     height: 1.7rem;
     background-color: white;
-  }
-
-  img {
-    width: 0.7rem;
-    height: 0.7rem;
-    margin: 0.5rem;
-  }
+    img
+      width: 0.7rem;
+      height: 0.7rem;
+      margin: 0.5rem;
 </style>

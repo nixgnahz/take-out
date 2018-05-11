@@ -23,40 +23,37 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   ul {
     margin: 0.45rem 0px;
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     background-color: white;
-  }
-
-  ul li a {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    font-size: 0.6rem;
-  }
-
-  ul li img {
-    width: 1.1rem;
-    height: 1.1rem;
-    margin: 0.3rem;
-  }
-
-  ul li p:nth-child(1) {
-    display: flex;
-    align-items: center;
-  }
-
-  ul li p:nth-child(2) {
-    color: #666;
-    width: 100%;
-    padding: 0.45rem;
-    border-bottom: 1px solid #ddd;
-  }
-
-  ul li:last-child p {
-    border: 0px;
+    li {
+      &:last-child p {
+        border: 0px;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        font-size: 0.6rem;
+      }
+      img {
+        width: 1.1rem;
+        height: 1.1rem;
+        margin: 0.3rem;
+      }
+      p:nth-child(1) {
+        display: flex;
+        align-items: center;
+      }
+      p:nth-child(2) {
+        color: #666;
+        width: 100%;
+        padding: 0.45rem;
+        border-bottom: 1px solid #ddd;
+      }
+    }
   }
 </style>
