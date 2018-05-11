@@ -306,18 +306,18 @@
           font-size: 0.5rem;
           margin: 0.75rem 5%;
         }
-        .brand_close {
-          color: white;
-          font-size: 0.75rem;
-          font-weight: lighter;
-          border: 1px solid #fff;
-          border-radius: 50%;
-          width: 1.2rem;
-          height: 1.2rem;
-          text-align: center;
-          line-height: 1.2rem;
-          margin-top: 2rem;
-        }
+      }
+      .brand_close {
+        color: white;
+        font-size: 0.75rem;
+        font-weight: lighter;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        width: 1.2rem;
+        height: 1.2rem;
+        text-align: center;
+        line-height: 1.2rem;
+        margin-top: 2rem;
       }
       .wrapper {
         position: fixed;
