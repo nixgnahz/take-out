@@ -18,7 +18,7 @@
 </template>
 
 <script>
-  import axios from 'axios'
+  import resData from '../../../static/login.json'
   import Toast from '../Toast.vue'
   export default {
     data () {
@@ -49,17 +49,13 @@
           this.showToast("请输入登录密码")
           return;
         }
-        axios.get('http://localhost:8080/static/login.json').then((res)=>{
-          if(this.username == res.data.username && this.password == res.data.password) {
-            self.$store.commit('loginSuccess');
-            self.$router.push({name: 'info'})
-          } else{
-            this.showToast("账号或密码填写有误")
-            return;
-          }
-        }).catch((error)=>{
-          this.showToast(error)
-        })
+        if(this.username == resData.username && this.password == resData.password) {
+          self.$store.commit('loginSuccess');
+          self.$router.push({name: 'info'})
+        } else{
+          this.showToast("账号或密码填写有误")
+          return;
+        }
       },
       showToast (text) {
         if(this.isShowToast) return;

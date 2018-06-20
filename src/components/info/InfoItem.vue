@@ -30,9 +30,6 @@
     border-bottom: 1px solid #ddd;
     background-color: white;
     li {
-      &:last-child p {
-        border: 0px;
-      }
       a {
         display: flex;
         align-items: center;
@@ -53,6 +50,9 @@
         width: 100%;
         padding: 0.45rem;
         border-bottom: 1px solid #ddd;
+      }
+      &:last-child p {
+        border: 0px;
       }
     }
   }

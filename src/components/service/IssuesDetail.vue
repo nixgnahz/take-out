@@ -16,7 +16,7 @@
 </template>
 
 <script>
-  import axios from 'axios'
+  import resData from '../../../static/issues.json'
   export default {
     data () {
       return {
@@ -27,11 +27,7 @@
     },
     created: function () {
       let id = this.$router.history.current.params.id;
-      axios.get('http://localhost:8080/static/issues.json').then((res)=>{
-        this.item = res.data[id];
-      }).catch((error)=>{
-        console.log(error)
-      })
+      this.item = resData.data[id];
     }
   }
 </script>
