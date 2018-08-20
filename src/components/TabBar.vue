@@ -3,8 +3,7 @@
     <ul>
       <li v-for="(item, index) in items" :key="item.key" @click="changeTab(index)">
         <router-link :to="{name: item.href}">
-          <img :src="item.activeImg" v-if="item.isActive"/>
-          <img :src="item.inactiveImg" v-else/>
+          <img :src="item.isActive ? item.activeImg : item.inactiveImg"/>
           <p>{{item.title}}</p>
         </router-link>
       </li>
